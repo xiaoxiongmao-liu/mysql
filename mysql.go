@@ -291,7 +291,7 @@ func (dialector Dialector) Explain(sql string, vars ...interface{}) string {
 }
 
 func (dialector Dialector) DataTypeOf(field *schema.Field) string {
-	switch field.DataType {
+	switch field.GORMDataType {
 	case schema.Bool:
 		return "boolean"
 	case schema.Int, schema.Uint:
